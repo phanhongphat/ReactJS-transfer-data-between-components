@@ -5,14 +5,12 @@ class A extends Component {
         k: 10
     }
 
-rt = () =>{
-        this.props.callBack1(this.state.k)
-}
+
     render() {
         return (
-            <div onClick={this.rt}>
+            <div>
                 {
-                    this.props.children
+                    this.props.render(this.state.k)
 
                 }
              </div>

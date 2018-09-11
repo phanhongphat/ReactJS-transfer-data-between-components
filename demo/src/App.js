@@ -6,23 +6,13 @@ class App extends Component {
     state = {
         h: 2
     }
-    abc = (a) => {
-       return (<B display = {a}/>)
-    }
-    funcApp =(a) => {
-        console.log(a)
-    }
+
 
   render() {
-        let h = this.state.h
+
     return (
       <div className="App">
-          <A callBack1 = {this.funcApp}>
-              {
-                  this.abc(h)
-              }
-
-          </A>
+        <A render = {(h) => (<B display ={h}/>)}/>
       </div>
     );
   }
